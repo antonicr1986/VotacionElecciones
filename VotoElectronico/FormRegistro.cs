@@ -95,15 +95,27 @@ namespace VotoElectronico
                 { "ERC", ventanaVotacion.VotosERC },
                 { "PNV", ventanaVotacion.VotosPNV },
                 { "EH Bildu", ventanaVotacion.VotosEHBildu }
-            };
+            };            
 
-            string mensaje = "Resultados de la votación:\n\n";
-            foreach (var kvp in votosPorPartido)
+            string mensaje2 = "Resultados de la votación cargada:\n\n";
+            if (VotanteDAL.votosPorPartido != null)
             {
-                mensaje += $"{kvp.Key}: {kvp.Value} votos\n";
+                foreach (var kvp in VotanteDAL.votosPorPartido)
+                {
+                    mensaje2 += $"{kvp.Key}: {kvp.Value} votos\n";
+                }
+                MessageBox.Show(mensaje2);
             }
+            else
+            {
+                string mensaje = "Resultados de la votación:\n\n";
+                foreach (var kvp in votosPorPartido)
+                {
+                    mensaje += $"{kvp.Key}: {kvp.Value} votos\n";
+                }
 
-            MessageBox.Show(mensaje);          
+                MessageBox.Show(mensaje);
+            }           
         }
 
         private void ButtonGuardarVotosBD_Click(object sender, EventArgs e)
@@ -116,11 +128,6 @@ namespace VotoElectronico
         {
             VotanteDAL.CargarVotos();
             MessageBox.Show("Votos cargados con éxito en la BD");
-        }
-
-        private void FormRegistro_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

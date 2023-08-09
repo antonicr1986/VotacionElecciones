@@ -7,8 +7,10 @@ using System.Data.SqlClient;
 
 namespace VotoElectronico
 {
-    class VotanteDAL
+    public class VotanteDAL
     {
+        public static Dictionary<string, int> votosPorPartido;
+
         public static void CrearTabla(SqlConnection Conn)
         {
             if (!ComprobarExistenciaTabla(Conn))
@@ -104,7 +106,7 @@ namespace VotoElectronico
 
         public static void CargarVotos()
         {
-            Dictionary<string, int> votosPorPartido = new Dictionary<string, int>();
+            votosPorPartido = new Dictionary<string, int>();
 
             using (SqlConnection connection = BDComun.ObtenerConexion())
             {
@@ -115,21 +117,18 @@ namespace VotoElectronico
 
                     SqlDataReader reader = command.ExecuteReader();
 
-                    int i = 0;
-                    while (reader.Read()&& votosPorPartido.Count>i)
+                    while (reader.Read())
                     {
                         string partido = reader["Partido"].ToString();
                         int votos = Convert.ToInt32(reader["Votos"]);
 
                         votosPorPartido[partido] = votos;
-                        i++;
                     }
 
                     reader.Close();
                 }
             }
-            // Ahora tienes los datos en el diccionario votosPorPartido
-            GuardarVotos(votosPorPartido);
+          
             foreach (var kvp in votosPorPartido)
             {
                 Console.WriteLine($"{kvp.Key}: {kvp.Value} votos");

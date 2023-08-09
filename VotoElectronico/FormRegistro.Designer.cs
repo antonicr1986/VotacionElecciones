@@ -165,7 +165,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormRegistro";
             this.Text = "REGISTRO VOTANTE";
-            this.Load += new System.EventHandler(this.FormRegistro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
