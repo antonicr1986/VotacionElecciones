@@ -35,14 +35,17 @@
             this.textBoxEdad = new System.Windows.Forms.TextBox();
             this.checkBoxAntecedentes = new System.Windows.Forms.CheckBox();
             this.buttonResultados = new System.Windows.Forms.Button();
+            this.labelApellidos = new System.Windows.Forms.Label();
+            this.textBoxApellidos = new System.Windows.Forms.TextBox();
+            this.buttonGuardarVotosBD = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonConfirmar
             // 
-            this.buttonConfirmar.Location = new System.Drawing.Point(38, 157);
+            this.buttonConfirmar.Location = new System.Drawing.Point(38, 200);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(96, 23);
-            this.buttonConfirmar.TabIndex = 0;
+            this.buttonConfirmar.TabIndex = 6;
             this.buttonConfirmar.Text = "CONFIRMAR";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
             this.buttonConfirmar.Click += new System.EventHandler(this.ButtonConfirmar_Click);
@@ -66,7 +69,7 @@
             // labelEdad
             // 
             this.labelEdad.AutoSize = true;
-            this.labelEdad.Location = new System.Drawing.Point(35, 85);
+            this.labelEdad.Location = new System.Drawing.Point(35, 133);
             this.labelEdad.Name = "labelEdad";
             this.labelEdad.Size = new System.Drawing.Size(32, 13);
             this.labelEdad.TabIndex = 3;
@@ -74,7 +77,7 @@
             // 
             // textBoxEdad
             // 
-            this.textBoxEdad.Location = new System.Drawing.Point(125, 78);
+            this.textBoxEdad.Location = new System.Drawing.Point(125, 126);
             this.textBoxEdad.Name = "textBoxEdad";
             this.textBoxEdad.Size = new System.Drawing.Size(100, 20);
             this.textBoxEdad.TabIndex = 4;
@@ -82,29 +85,58 @@
             // checkBoxAntecedentes
             // 
             this.checkBoxAntecedentes.AutoSize = true;
-            this.checkBoxAntecedentes.Location = new System.Drawing.Point(72, 118);
+            this.checkBoxAntecedentes.Location = new System.Drawing.Point(72, 161);
             this.checkBoxAntecedentes.Name = "checkBoxAntecedentes";
             this.checkBoxAntecedentes.Size = new System.Drawing.Size(92, 17);
-            this.checkBoxAntecedentes.TabIndex = 7;
+            this.checkBoxAntecedentes.TabIndex = 5;
             this.checkBoxAntecedentes.Text = "Antecedentes";
             this.checkBoxAntecedentes.UseVisualStyleBackColor = true;
             // 
             // buttonResultados
             // 
-            this.buttonResultados.Location = new System.Drawing.Point(163, 157);
+            this.buttonResultados.Location = new System.Drawing.Point(163, 200);
             this.buttonResultados.Name = "buttonResultados";
             this.buttonResultados.Size = new System.Drawing.Size(113, 23);
-            this.buttonResultados.TabIndex = 8;
+            this.buttonResultados.TabIndex = 7;
             this.buttonResultados.Text = "VER RESULTADOS";
             this.buttonResultados.UseVisualStyleBackColor = true;
             this.buttonResultados.Click += new System.EventHandler(this.ButtonResultados_Click);
+            // 
+            // labelApellidos
+            // 
+            this.labelApellidos.AutoSize = true;
+            this.labelApellidos.Location = new System.Drawing.Point(35, 91);
+            this.labelApellidos.Name = "labelApellidos";
+            this.labelApellidos.Size = new System.Drawing.Size(49, 13);
+            this.labelApellidos.TabIndex = 9;
+            this.labelApellidos.Text = "Apellidos";
+            // 
+            // textBoxApellidos
+            // 
+            this.textBoxApellidos.Location = new System.Drawing.Point(125, 91);
+            this.textBoxApellidos.Name = "textBoxApellidos";
+            this.textBoxApellidos.Size = new System.Drawing.Size(100, 20);
+            this.textBoxApellidos.TabIndex = 3;
+            // 
+            // buttonGuardarVotosBD
+            // 
+            this.buttonGuardarVotosBD.Location = new System.Drawing.Point(81, 245);
+            this.buttonGuardarVotosBD.Name = "buttonGuardarVotosBD";
+            this.buttonGuardarVotosBD.Size = new System.Drawing.Size(133, 38);
+            this.buttonGuardarVotosBD.TabIndex = 10;
+            this.buttonGuardarVotosBD.Text = "GUARDAR VOTOS BD";
+            this.buttonGuardarVotosBD.UseVisualStyleBackColor = true;
+            this.buttonGuardarVotosBD.Click += new System.EventHandler(this.ButtonGuardarVotosBD_Click);
             // 
             // FormRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(300, 215);
+            this.ClientSize = new System.Drawing.Size(300, 295);
+            this.Controls.Add(this.buttonGuardarVotosBD);
+            this.Controls.Add(this.textBoxApellidos);
+            this.Controls.Add(this.labelApellidos);
             this.Controls.Add(this.buttonResultados);
             this.Controls.Add(this.checkBoxAntecedentes);
             this.Controls.Add(this.textBoxEdad);
@@ -129,6 +161,9 @@
         private System.Windows.Forms.TextBox textBoxEdad;
         private System.Windows.Forms.CheckBox checkBoxAntecedentes;
         private System.Windows.Forms.Button buttonResultados;
+        private System.Windows.Forms.Label labelApellidos;
+        private System.Windows.Forms.TextBox textBoxApellidos;
+        private System.Windows.Forms.Button buttonGuardarVotosBD;
     }
 }
 

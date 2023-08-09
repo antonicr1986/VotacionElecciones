@@ -66,8 +66,8 @@ namespace VotoElectronico
                 else if (radioButtonEHBildu.Checked)
                 {
                     VotosEHBildu++;
-                }
-                
+                }              
+
                 MessageBox.Show("Has introducido tu voto correctamente");
                 this.Hide();
             }
