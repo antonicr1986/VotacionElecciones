@@ -47,13 +47,13 @@ namespace VotoElectronico
 
                     if (resultado > 0)
                     {
-                        MessageBox.Show("Datos del votante guardados con éxito!!", "Datos Guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ventanaVotacion.ShowDialog();
                     }
                     else
                     {
                         MessageBox.Show("No se pudieron guardar los datos!!", "Error al guardar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
-                    ventanaVotacion.ShowDialog();
+                    
                 }
                 else
                 {
@@ -107,6 +107,13 @@ namespace VotoElectronico
         private void ButtonGuardarVotosBD_Click(object sender, EventArgs e)
         {
             VotanteDAL.GuardarVotos(votosPorPartido);
+            MessageBox.Show("Votos guardados con éxito en la BD");
+        }
+
+        private void ButtonCargarBD_Click(object sender, EventArgs e)
+        {
+            VotanteDAL.CargarVotos();
+            MessageBox.Show("Votos cargados con éxito en la BD");
         }
     }
 }

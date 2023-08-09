@@ -38,6 +38,7 @@
             this.labelApellidos = new System.Windows.Forms.Label();
             this.textBoxApellidos = new System.Windows.Forms.TextBox();
             this.buttonGuardarVotosBD = new System.Windows.Forms.Button();
+            this.buttonCargarBD = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonConfirmar
@@ -98,7 +99,7 @@
             // 
             // buttonResultados
             // 
-            this.buttonResultados.Location = new System.Drawing.Point(163, 200);
+            this.buttonResultados.Location = new System.Drawing.Point(163, 222);
             this.buttonResultados.Name = "buttonResultados";
             this.buttonResultados.Size = new System.Drawing.Size(113, 23);
             this.buttonResultados.TabIndex = 7;
@@ -125,7 +126,7 @@
             // 
             // buttonGuardarVotosBD
             // 
-            this.buttonGuardarVotosBD.Location = new System.Drawing.Point(163, 251);
+            this.buttonGuardarVotosBD.Location = new System.Drawing.Point(24, 294);
             this.buttonGuardarVotosBD.Name = "buttonGuardarVotosBD";
             this.buttonGuardarVotosBD.Size = new System.Drawing.Size(113, 30);
             this.buttonGuardarVotosBD.TabIndex = 10;
@@ -133,12 +134,24 @@
             this.buttonGuardarVotosBD.UseVisualStyleBackColor = true;
             this.buttonGuardarVotosBD.Click += new System.EventHandler(this.ButtonGuardarVotosBD_Click);
             // 
+            // buttonCargarBD
+            // 
+            this.buttonCargarBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCargarBD.Location = new System.Drawing.Point(163, 294);
+            this.buttonCargarBD.Name = "buttonCargarBD";
+            this.buttonCargarBD.Size = new System.Drawing.Size(113, 29);
+            this.buttonCargarBD.TabIndex = 11;
+            this.buttonCargarBD.Text = "CARGAR BD";
+            this.buttonCargarBD.UseVisualStyleBackColor = true;
+            this.buttonCargarBD.Click += new System.EventHandler(this.ButtonCargarBD_Click);
+            // 
             // FormRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(300, 303);
+            this.ClientSize = new System.Drawing.Size(300, 360);
+            this.Controls.Add(this.buttonCargarBD);
             this.Controls.Add(this.buttonGuardarVotosBD);
             this.Controls.Add(this.textBoxApellidos);
             this.Controls.Add(this.labelApellidos);
@@ -169,6 +182,7 @@
         private System.Windows.Forms.Label labelApellidos;
         private System.Windows.Forms.TextBox textBoxApellidos;
         private System.Windows.Forms.Button buttonGuardarVotosBD;
+        private System.Windows.Forms.Button buttonCargarBD;
     }
 }
 
