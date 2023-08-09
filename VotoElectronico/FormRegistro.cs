@@ -18,12 +18,14 @@ namespace VotoElectronico
 
         Votante votante = new Votante();
         FormVotacion ventanaVotacion = new FormVotacion();
+        SqlConnection Conn = BDComun.ObtenerConexion();
 
         Dictionary<string, int> votosPorPartido;
 
         public FormRegistro()
         {
             InitializeComponent();
+            VotanteDAL.CrearTabla(Conn);
         }
 
         private void ButtonConfirmar_Click(object sender, EventArgs e)
@@ -114,6 +116,11 @@ namespace VotoElectronico
         {
             VotanteDAL.CargarVotos();
             MessageBox.Show("Votos cargados con éxito en la BD");
+        }
+
+        private void FormRegistro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

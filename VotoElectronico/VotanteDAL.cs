@@ -9,6 +9,58 @@ namespace VotoElectronico
 {
     class VotanteDAL
     {
+        public static void CrearTabla(SqlConnection Conn)
+        {
+            if (!ComprobarExistenciaTabla(Conn))
+            {
+                using (Conn = BDComun.ObtenerConexion())
+                {
+                    string createTableQuery = @"
+                    CREATE TABLE VotosElecciones (
+                        Partido varchar(20),
+                        Votos int
+                    )";
+
+                    using (SqlCommand command = new SqlCommand(createTableQuery, Conn))
+                    {
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("Tabla VotosElecciones creada exitosamente.");
+                    }
+                }
+            }        
+        }
+
+        public static bool ComprobarExistenciaTabla(SqlConnection Conn)
+        {
+            string tableName = "VotosElecciones";
+
+            using (Conn = BDComun.ObtenerConexion())
+            {
+                string checkTableQuery = @"
+                    SELECT COUNT(*)
+                    FROM INFORMATION_SCHEMA.TABLES
+                    WHERE TABLE_NAME = @TableName";
+
+                using (SqlCommand command = new SqlCommand(checkTableQuery, Conn))
+                {
+                    command.Parameters.AddWithValue("@TableName", tableName);
+
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+
+                    if (count > 0)
+                    {
+                        Console.WriteLine($"La tabla {tableName} existe en la base de datos.");
+                        return true;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"La tabla {tableName} no existe en la base de datos.");
+                        return false;
+                    }
+                }
+            }
+        }
+
         public static int Agregar(Votante votante)
         {
             int retorno = 0;
@@ -32,11 +84,19 @@ namespace VotoElectronico
                     string partido = kvp.Key;
                     int votos = kvp.Value;
 
-                    string insertQuery = $"INSERT INTO VotosGenerales (Partido, Votos) VALUES ('{partido}', {votos})";
+                    string updateQuery = $"UPDATE VotosElecciones SET Votos = {votos} WHERE Partido = '{partido}'";
 
-                    using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                    using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
                     {
-                        command.ExecuteNonQuery();
+                        int rowsUpdated = updateCommand.ExecuteNonQuery();
+                        if (rowsUpdated == 0)
+                        {
+                            string insertQuery = $"INSERT INTO VotosElecciones (Partido, Votos) VALUES ('{partido}', {votos})";
+                            using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
+                            {
+                                insertCommand.ExecuteNonQuery();
+                            }
+                        }
                     }
                 }
             }
@@ -48,7 +108,7 @@ namespace VotoElectronico
 
             using (SqlConnection connection = BDComun.ObtenerConexion())
             {
-                string query = "SELECT Partido, Votos FROM VotosGenerales";
+                string query = "SELECT Partido, Votos FROM VotosElecciones";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.ExecuteNonQuery();
