@@ -20,7 +20,7 @@ namespace VotoElectronico
         FormVotacion ventanaVotacion = new FormVotacion();
         SqlConnection Conn = BDComun.ObtenerConexion();
 
-        Dictionary<string, int> votosPorPartido;
+        static Dictionary<string, int> votosPorPartido;
 
         public FormRegistro()
         {
@@ -118,13 +118,13 @@ namespace VotoElectronico
             }           
         }
 
-        private void ButtonGuardarVotosBD_Click(object sender, EventArgs e)
+        public static void ButtonGuardarVotosBD_Click(object sender, EventArgs e)
         {
             VotanteDAL.GuardarVotos(votosPorPartido);
             MessageBox.Show("Votos guardados con éxito en la BD");
         }
 
-        private void ButtonCargarBD_Click(object sender, EventArgs e)
+        public static void ButtonCargarBD_Click(object sender, EventArgs e)
         {
             VotanteDAL.CargarVotos();
             MessageBox.Show("Votos cargados con éxito en la BD");

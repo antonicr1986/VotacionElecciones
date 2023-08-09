@@ -69,6 +69,8 @@ namespace VotoElectronico
                 }              
 
                 MessageBox.Show("Has introducido tu voto correctamente");
+                FormRegistro.ButtonGuardarVotosBD_Click(sender, e);
+                FormRegistro.ButtonCargarBD_Click(sender, e);
                 this.Hide();
             }
         }

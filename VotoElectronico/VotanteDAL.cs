@@ -81,22 +81,38 @@ namespace VotoElectronico
         {
             using (SqlConnection connection = BDComun.ObtenerConexion())
             {
-                foreach (var kvp in votosPorPartido)
+                if (votosPorPartido != null)
                 {
-                    string partido = kvp.Key;
-                    int votos = kvp.Value;
-
-                    string updateQuery = $"UPDATE VotosElecciones SET Votos = {votos} WHERE Partido = '{partido}'";
-
-                    using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
+                    foreach (var kvp in votosPorPartido)
                     {
-                        int rowsUpdated = updateCommand.ExecuteNonQuery();
-                        if (rowsUpdated == 0)
+                        string partido = kvp.Key;
+                        int votos = kvp.Value;
+
+                        string checkExistenceQuery = $"SELECT COUNT(*) FROM VotosElecciones WHERE Partido = '{partido}'";
+
+                        using (SqlCommand checkExistenceCommand = new SqlCommand(checkExistenceQuery, connection))
                         {
-                            string insertQuery = $"INSERT INTO VotosElecciones (Partido, Votos) VALUES ('{partido}', {votos})";
-                            using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
+                            int rowCount = (int)checkExistenceCommand.ExecuteScalar();
+
+                            if (rowCount > 0)
                             {
-                                insertCommand.ExecuteNonQuery();
+
+                                string updateQuery = $"UPDATE VotosElecciones SET Votos = {votos} WHERE Partido = '{partido}' AND Votos <{votos}";
+
+                                using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
+                                {
+                                    {
+                                        updateCommand.ExecuteNonQuery();
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                string insertQuery = $"INSERT INTO VotosElecciones (Partido, Votos) VALUES ('{partido}', {votos})";
+                                using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
+                                {
+                                    insertCommand.ExecuteNonQuery();
+                                }
                             }
                         }
                     }
