@@ -32,7 +32,7 @@ namespace VotoElectronico
                     string partido = kvp.Key;
                     int votos = kvp.Value;
 
-                    string insertQuery = $"INSERT INTO VotosPartidos (Partido, Votos) VALUES ('{partido}', {votos})";
+                    string insertQuery = $"INSERT INTO VotosElecciones (Partido, Votos) VALUES ('{partido}', {votos})";
 
                     using (SqlCommand command = new SqlCommand(insertQuery, connection))
                     {

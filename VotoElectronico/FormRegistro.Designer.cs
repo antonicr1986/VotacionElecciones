@@ -42,9 +42,10 @@
             // 
             // buttonConfirmar
             // 
-            this.buttonConfirmar.Location = new System.Drawing.Point(38, 200);
+            this.buttonConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConfirmar.Location = new System.Drawing.Point(24, 212);
             this.buttonConfirmar.Name = "buttonConfirmar";
-            this.buttonConfirmar.Size = new System.Drawing.Size(96, 23);
+            this.buttonConfirmar.Size = new System.Drawing.Size(119, 41);
             this.buttonConfirmar.TabIndex = 6;
             this.buttonConfirmar.Text = "CONFIRMAR";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
@@ -53,15 +54,16 @@
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.Location = new System.Drawing.Point(35, 55);
+            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.Location = new System.Drawing.Point(35, 47);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(44, 13);
+            this.labelNombre.Size = new System.Drawing.Size(62, 18);
             this.labelNombre.TabIndex = 1;
             this.labelNombre.Text = "Nombre";
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(125, 52);
+            this.textBoxNombre.Location = new System.Drawing.Point(125, 47);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(100, 20);
             this.textBoxNombre.TabIndex = 2;
@@ -69,9 +71,10 @@
             // labelEdad
             // 
             this.labelEdad.AutoSize = true;
-            this.labelEdad.Location = new System.Drawing.Point(35, 133);
+            this.labelEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEdad.Location = new System.Drawing.Point(35, 126);
             this.labelEdad.Name = "labelEdad";
-            this.labelEdad.Size = new System.Drawing.Size(32, 13);
+            this.labelEdad.Size = new System.Drawing.Size(42, 18);
             this.labelEdad.TabIndex = 3;
             this.labelEdad.Text = "Edad";
             // 
@@ -85,9 +88,10 @@
             // checkBoxAntecedentes
             // 
             this.checkBoxAntecedentes.AutoSize = true;
+            this.checkBoxAntecedentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxAntecedentes.Location = new System.Drawing.Point(72, 161);
             this.checkBoxAntecedentes.Name = "checkBoxAntecedentes";
-            this.checkBoxAntecedentes.Size = new System.Drawing.Size(92, 17);
+            this.checkBoxAntecedentes.Size = new System.Drawing.Size(116, 22);
             this.checkBoxAntecedentes.TabIndex = 5;
             this.checkBoxAntecedentes.Text = "Antecedentes";
             this.checkBoxAntecedentes.UseVisualStyleBackColor = true;
@@ -105,26 +109,27 @@
             // labelApellidos
             // 
             this.labelApellidos.AutoSize = true;
-            this.labelApellidos.Location = new System.Drawing.Point(35, 91);
+            this.labelApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApellidos.Location = new System.Drawing.Point(35, 87);
             this.labelApellidos.Name = "labelApellidos";
-            this.labelApellidos.Size = new System.Drawing.Size(49, 13);
+            this.labelApellidos.Size = new System.Drawing.Size(67, 18);
             this.labelApellidos.TabIndex = 9;
             this.labelApellidos.Text = "Apellidos";
             // 
             // textBoxApellidos
             // 
-            this.textBoxApellidos.Location = new System.Drawing.Point(125, 91);
+            this.textBoxApellidos.Location = new System.Drawing.Point(125, 87);
             this.textBoxApellidos.Name = "textBoxApellidos";
             this.textBoxApellidos.Size = new System.Drawing.Size(100, 20);
             this.textBoxApellidos.TabIndex = 3;
             // 
             // buttonGuardarVotosBD
             // 
-            this.buttonGuardarVotosBD.Location = new System.Drawing.Point(81, 245);
+            this.buttonGuardarVotosBD.Location = new System.Drawing.Point(163, 251);
             this.buttonGuardarVotosBD.Name = "buttonGuardarVotosBD";
-            this.buttonGuardarVotosBD.Size = new System.Drawing.Size(133, 38);
+            this.buttonGuardarVotosBD.Size = new System.Drawing.Size(113, 30);
             this.buttonGuardarVotosBD.TabIndex = 10;
-            this.buttonGuardarVotosBD.Text = "GUARDAR VOTOS BD";
+            this.buttonGuardarVotosBD.Text = "GUARDAR EN BD";
             this.buttonGuardarVotosBD.UseVisualStyleBackColor = true;
             this.buttonGuardarVotosBD.Click += new System.EventHandler(this.ButtonGuardarVotosBD_Click);
             // 
@@ -133,7 +138,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(300, 295);
+            this.ClientSize = new System.Drawing.Size(300, 303);
             this.Controls.Add(this.buttonGuardarVotosBD);
             this.Controls.Add(this.textBoxApellidos);
             this.Controls.Add(this.labelApellidos);

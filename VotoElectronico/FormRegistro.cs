@@ -19,6 +19,8 @@ namespace VotoElectronico
         Votante votante = new Votante();
         FormVotacion ventanaVotacion = new FormVotacion();
 
+        Dictionary<string, int> votosPorPartido;
+
         public FormRegistro()
         {
             InitializeComponent();
@@ -81,7 +83,7 @@ namespace VotoElectronico
 
         private void ButtonResultados_Click(object sender, EventArgs e)
         {
-            Dictionary<string, int> votosPorPartido = new Dictionary<string, int>
+            votosPorPartido = new Dictionary<string, int>
             {
                 { "Partido Popular", ventanaVotacion.VotosPP },
                 { "PSOE", ventanaVotacion.VotosPSOE },
@@ -104,7 +106,7 @@ namespace VotoElectronico
 
         private void ButtonGuardarVotosBD_Click(object sender, EventArgs e)
         {
-            //VotanteDAL.GuardarVotos(votosPorPartido);
+            VotanteDAL.GuardarVotos(votosPorPartido);
         }
     }
 }
