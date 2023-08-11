@@ -132,7 +132,7 @@
             this.buttonGuardarVotosBD.TabIndex = 10;
             this.buttonGuardarVotosBD.Text = "GUARDAR EN BD";
             this.buttonGuardarVotosBD.UseVisualStyleBackColor = true;
-            this.buttonGuardarVotosBD.Click += new System.EventHandler(FormRegistro.ButtonGuardarVotosBD_Click);
+            this.buttonGuardarVotosBD.Click += new System.EventHandler(this.buttonGuardarVotosBD_Click_1);
             // 
             // buttonCargarBD
             // 
@@ -143,7 +143,7 @@
             this.buttonCargarBD.TabIndex = 11;
             this.buttonCargarBD.Text = "CARGAR BD";
             this.buttonCargarBD.UseVisualStyleBackColor = true;
-            this.buttonCargarBD.Click += new System.EventHandler(FormRegistro.ButtonCargarBD_Click);
+            this.buttonCargarBD.Click += new System.EventHandler(this.buttonCargarBD_Click_1);
             // 
             // FormRegistro
             // 

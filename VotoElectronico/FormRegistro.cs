@@ -19,8 +19,9 @@ namespace VotoElectronico
         Votante votante = new Votante();
         FormVotacion ventanaVotacion = new FormVotacion();
         SqlConnection Conn = BDComun.ObtenerConexion();
+        public static bool MostrarResultados { get; set; }
 
-        static Dictionary<string, int> votosPorPartido;
+        public static Dictionary<string, int> votosPorPartido;
 
         public FormRegistro()
         {
@@ -85,6 +86,7 @@ namespace VotoElectronico
 
         private void ButtonResultados_Click(object sender, EventArgs e)
         {
+            bool VotacionComenzada = false;
             votosPorPartido = new Dictionary<string, int>
             {
                 { "Partido Popular", ventanaVotacion.VotosPP },
@@ -98,7 +100,7 @@ namespace VotoElectronico
             };            
 
             string mensaje2 = "Resultados de la votación cargada:\n\n";
-            if (VotanteDAL.votosPorPartido != null)
+            if (VotanteDAL.votosPorPartido != null && VotanteDAL.votosPorPartido.Count > 0)
             {
                 foreach (var kvp in VotanteDAL.votosPorPartido)
                 {
@@ -106,25 +108,36 @@ namespace VotoElectronico
                 }
                 MessageBox.Show(mensaje2);
             }
-            else
+            else if (votosPorPartido != null && votosPorPartido.Count>0)
             {
                 string mensaje = "Resultados de la votación:\n\n";
                 foreach (var kvp in votosPorPartido)
                 {
                     mensaje += $"{kvp.Key}: {kvp.Value} votos\n";
+                    if (kvp.Value != 0)
+                    {
+                        VotacionComenzada = true;
+                    }
                 }
 
-                MessageBox.Show(mensaje);
-            }           
+                if (VotacionComenzada)
+                {
+                    MessageBox.Show(mensaje);
+                }
+                else
+                {
+                    MessageBox.Show("Votación no comenzada");
+                }
+            }
         }
 
-        public static void ButtonGuardarVotosBD_Click(object sender, EventArgs e)
+        private void buttonGuardarVotosBD_Click_1(object sender, EventArgs e)
         {
             VotanteDAL.GuardarVotos(votosPorPartido);
             MessageBox.Show("Votos guardados con éxito en la BD");
         }
 
-        public static void ButtonCargarBD_Click(object sender, EventArgs e)
+        private void buttonCargarBD_Click_1(object sender, EventArgs e)
         {
             VotanteDAL.CargarVotos();
             MessageBox.Show("Votos cargados con éxito en la BD");

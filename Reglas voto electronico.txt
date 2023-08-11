@@ -1,32 +1,33 @@
-3. Aplicación de Voto Electrónico
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+			APLICACION DE VOTO ELECTRONICO ELECCIONES
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+
 Esta aplicación recreará el proceso de votación durante unas elecciones, pero con una variedad.
 La aplicación debería:
 
--Incluir un formulario de registro para registrar un nuevo votante!!!!!!!!!!!!!!!!!!!!!!!!
+-Incluir un formulario de registro para registrar un nuevo votante
 
 -Comprobar si el usuario cumple los requisitos para votar 
-(mayor de 18 años, no tiene antecedentes penales, etc.)!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+(mayor de 18 años, no tiene antecedentes penales, etc.)
 
--Ofrecer de 5-10 opciones entre las que elegir!!!!!!!!!!!!!!!!!!!
+-Ofrecer de 5-10 opciones entre las que elegir
 
--Mostrar los resultados de las elecciones!!!!!!!!!!!!!!!!!!!!
-
-De nuevo, puede usar SQL Server para la base de datos, y Visual Studio para la parte de la interfaz.
-Si necesita refrescar sus conocimientos de SQL, puede consultar este curso online. 
-Aunque Windows 8 es la última versión de Windows puede seguir desarrollando pensando en Windows 7.
+-Mostrar los resultados de las elecciones
 
 VOTO ELECTRONICO v1.0
---------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
+--------------------------------------------------------------------------------------------Implementacion sin usar Base de Datos
+HECHO
 
 VOTO ELECTRONICO 2.0
----------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------Implementacion usando Base de Datos minima
+HECHO falta comprobar
+
+VOTO ELECTRONICO 3.0
+-------------------------------------------------------------------------------------------
+-Implementacion usando Base de Datos con todas las funcionalidades necesarias
+
 
 
 

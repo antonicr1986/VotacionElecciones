@@ -28,6 +28,7 @@ namespace VotoElectronico
 
         private void ButtonConfirmarVoto_Click(object sender, EventArgs e)
         {
+
             if (!radioButtonPP.Checked && !radioButtonPSOE.Checked && !radioButtonSUMAR.Checked && !radioButtonVOX.Checked 
                 && !radioButtonJUNTS.Checked && !radioButtonERC.Checked && !radioButtonEHBildu.Checked && !radioButtonPNV.Checked)
             {
@@ -69,8 +70,8 @@ namespace VotoElectronico
                 }              
 
                 MessageBox.Show("Has introducido tu voto correctamente");
-                FormRegistro.ButtonGuardarVotosBD_Click(sender, e);
-                FormRegistro.ButtonCargarBD_Click(sender, e);
+                VotanteDAL.GuardarVotos(FormRegistro.votosPorPartido);
+                VotanteDAL.CargarVotos();              
                 this.Hide();
             }
         }
