@@ -18,7 +18,7 @@ namespace VotoElectronico
                 using (Conn = BDComun.ObtenerConexion())
                 {
                     string createTableQuery = @"
-                    CREATE TABLE VotosElecciones (
+                    CREATE TABLE VE_VotosElecciones (
                         Partido varchar(20),
                         Votos int
                     )";
@@ -26,7 +26,7 @@ namespace VotoElectronico
                     using (SqlCommand command = new SqlCommand(createTableQuery, Conn))
                     {
                         command.ExecuteNonQuery();
-                        Console.WriteLine("Tabla VotosElecciones creada exitosamente.");
+                        Console.WriteLine("Tabla VE_VotosElecciones creada exitosamente.");
                     }
                 }
             }        
@@ -34,7 +34,7 @@ namespace VotoElectronico
 
         public static bool ComprobarExistenciaTabla(SqlConnection Conn)
         {
-            string tableName = "VotosElecciones";
+            string tableName = "VE_VotosElecciones";
 
             using (Conn = BDComun.ObtenerConexion())
             {
@@ -68,7 +68,7 @@ namespace VotoElectronico
             int retorno = 0;
             using (SqlConnection Conn = BDComun.ObtenerConexion())
             {
-                SqlCommand Comando = new SqlCommand(string.Format("insert into Votos (Nombre, Apellidos, Edad) values ('{0}','{1}','{2}')",
+                SqlCommand Comando = new SqlCommand(string.Format("insert into VE_Votos (Nombre, Apellidos, Edad) values ('{0}','{1}','{2}')",
                     votante.Nombre, votante.Apellidos, votante.Edad), Conn);
 
                 retorno = Comando.ExecuteNonQuery();
@@ -88,7 +88,7 @@ namespace VotoElectronico
                         string partido = kvp.Key;
                         int votos = kvp.Value;
 
-                        string checkExistenceQuery = $"SELECT COUNT(*) FROM VotosElecciones WHERE Partido = '{partido}'";
+                        string checkExistenceQuery = $"SELECT COUNT(*) FROM VE_VotosElecciones WHERE Partido = '{partido}'";
 
                         using (SqlCommand checkExistenceCommand = new SqlCommand(checkExistenceQuery, connection))
                         {
@@ -97,7 +97,7 @@ namespace VotoElectronico
                             if (rowCount > 0)
                             {
 
-                                string updateQuery = $"UPDATE VotosElecciones SET Votos = {votos} WHERE Partido = '{partido}' AND Votos <{votos}";
+                                string updateQuery = $"UPDATE VE_VotosElecciones SET Votos = {votos} WHERE Partido = '{partido}' AND Votos <{votos}";
 
                                 using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
                                 {
@@ -108,7 +108,7 @@ namespace VotoElectronico
                             }
                             else
                             {
-                                string insertQuery = $"INSERT INTO VotosElecciones (Partido, Votos) VALUES ('{partido}', {votos})";
+                                string insertQuery = $"INSERT INTO VE_VotosElecciones (Partido, Votos) VALUES ('{partido}', {votos})";
                                 using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
                                 {
                                     insertCommand.ExecuteNonQuery();
@@ -126,7 +126,7 @@ namespace VotoElectronico
 
             using (SqlConnection connection = BDComun.ObtenerConexion())
             {
-                string query = "SELECT Partido, Votos FROM VotosElecciones";
+                string query = "SELECT Partido, Votos FROM VE_VotosElecciones";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.ExecuteNonQuery();

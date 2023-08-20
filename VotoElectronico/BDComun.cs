@@ -11,7 +11,7 @@ namespace VotoElectronico
     {
         public static SqlConnection ObtenerConexion()
         {
-            SqlConnection Conn = new SqlConnection("Data source=ACER-NITRO5; Initial Catalog=VotosElectronicos; User Id=sa; Password=12345678");
+            SqlConnection Conn = new SqlConnection("workstation id=BDPruebasAntonicr1986.mssql.somee.com;packet size=4096;user id=antonicr1986_SQLLogin_2;pwd=3wptkt5v4v;data source=BDPruebasAntonicr1986.mssql.somee.com;persist security info=False;initial catalog=BDPruebasAntonicr1986");
             Conn.Open();
 
             return Conn;
