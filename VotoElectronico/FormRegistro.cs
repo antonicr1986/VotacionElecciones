@@ -75,26 +75,25 @@ namespace VotoElectronico
                         }
                         else
                         {
-                            // Consulta SQL para insertar un votante
-                            string query = "INSERT INTO Votante (Nombre, Apellidos, Edad, Antecedentes) " +
-                                        "VALUES (@Nombre, @Apellidos, @Edad, @Antecedentes)";
-
                             // Usar SqlConnection para conectarse a la base de datos
-                            using (SqlConnection conexion = objetoConexion.getConexion())
+                            using (var context = new DBonlineAntonioEntities()) //***EF
                             {
                                 try
                                 {
-                                    // Crear el comando para la consulta de inserción
-                                    using (SqlCommand command = new SqlCommand(query, conexion))
+                                    // Crear el objeto votante con los datos del formulario
+                                    var nuevoVotante = new Voto_Votante
                                     {
-                                        // Parámetros para evitar inyección SQL
-                                        command.Parameters.AddWithValue("@Nombre", nombre);
-                                        command.Parameters.AddWithValue("@Apellidos", apellidos);
-                                        command.Parameters.AddWithValue("@Edad", edad);
-                                        command.Parameters.AddWithValue("@Antecedentes", antecedentes);
+                                        Nombre = nombre,
+                                        Apellidos = apellidos,
+                                        Edad = edad,
+                                        Antecedentes = antecedentes
+                                    };
 
-                                        // Ejecutar la consulta
-                                        int rowsAffected = command.ExecuteNonQuery();
+                                    // Agregar el nuevo votante al contexto
+                                    context.Voto_Votante.Add(nuevoVotante);
+
+                                    //Guardar los cambios en la base de datos
+                                    int rowsAffected = context.SaveChanges();
 
                                         // Verificar si se ha insertado correctamente
                                         if (rowsAffected > 0)
@@ -110,73 +109,58 @@ namespace VotoElectronico
                                             MessageBox.Show("No se pudo insertar el votante.");
                                         }
                                     }
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show("DentroDelCatch");
-                                    Console.WriteLine("Error: " + ex.Message);
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show("DentroDelCatch");
+                                        Console.WriteLine("Error: " + ex.Message);
+                                    }
                                 }
                             }
+                            ventanaVotacion.ShowDialog();
                         }
-                        ventanaVotacion.ShowDialog();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Introduce un formato correcto en la edad");
-                    }
-                }                  
+                        else
+                        {
+                            MessageBox.Show("Introduce un formato correcto en la edad");
+                        }
+                    }                  
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Excepcion: " + ex.Message);
+                }        
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Excepcion: " + ex.Message);
-            }        
-        }
 
         private void ButtonResultados_Click(object sender, EventArgs e)
         {
-            bool VotacionComenzada = false;
+            bool votacionComenzada = false;
 
-            //***A1 Conectar con BD
-            using (SqlConnection conexion = objetoConexion.getConexion())
+            // Usar el contexto de Entity Framework
+            using (var context = new DBonlineAntonioEntities())
             {
-                string queryCount = "SELECT COUNT(*) FROM PartidoPolitico";
-                string query = "SELECT Nombre, Votos FROM PartidoPolitico";
-
-                SqlCommand comando = new SqlCommand(queryCount, conexion);
-
-                using (SqlCommand command = new SqlCommand(query, conexion))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        // Leer los datos fila por fila
-                        while (reader.Read())
-                        {
-                            // Obtener el nombre y los votos de cada fila
-                            string nombre = reader["Nombre"].ToString();
-                            int votos = (int)reader["Votos"];
-
-                            // Añadir los datos al diccionario
-                            votosPorPartido[nombre] = votos;
-                        }
-                    }
-                }
-
-                int count = (int)comando.ExecuteScalar(); // Retorna el número de coincidencias
+                int count = context.Voto_PartidoPolitico.Count();
 
                 if (count > 0)
                 {
-                    // Hay partidos politicos en la tabla
-                    if (votosPorPartido != null && votosPorPartido.Count > 0)
+                    // Obtener los nombres y votos de los partidos
+                    var partidos = context.Voto_PartidoPolitico.Select(p => new { p.Nombre, p.Votos }).ToList();
+
+                    votosPorPartido.Clear();
+
+                    foreach (var partido in partidos)
+                    {
+                        votosPorPartido[partido.Nombre] = partido.Votos;
+                    }
+
+                    if (votosPorPartido.Count > 0)
                     {
                         string mensaje = "Resultados de la votación:\n\n";
                         foreach (var kvp in votosPorPartido)
                         {
                             mensaje += $"{kvp.Key}: {kvp.Value} votos\n";
-
-                            VotacionComenzada = true;//LCH
+                            votacionComenzada = true;
                         }
 
-                        if (VotacionComenzada)
+                        if (votacionComenzada)
                         {
                             MessageBox.Show(mensaje);
                         }
@@ -189,39 +173,31 @@ namespace VotoElectronico
                     {
                         MessageBox.Show("No hay datos para ver de la votación");
                     }
-
-                    if (conexion.State != ConnectionState.Open)
-                    {
-                        MessageBox.Show("No se pudo establecer conexión con la base de datos.");
-                        return;
-                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron partidos políticos en la base de datos.");
                 }
             }
         }
 
         public bool VotanteExiste(string nombre, string apellidos, int edad)
         {
-            // Consulta SQL para verificar si el votante existe
-            string query = "SELECT COUNT(*) FROM Votante WHERE Nombre = @Nombre AND Apellidos = @Apellidos AND @Edad = @Edad";
-
-            using (SqlConnection conexion = objetoConexion.getConexion())
+            try
             {
-                SqlCommand command = new SqlCommand(query, conexion);
-                command.Parameters.AddWithValue("@Nombre", nombre);  // Parámetros SQL
-                command.Parameters.AddWithValue("@Apellidos", apellidos);
-                command.Parameters.AddWithValue("@Edad", edad);
-
-                try
+                using (var context = new DBonlineAntonioEntities())
                 {
-                    int count = (int)command.ExecuteScalar();  // Ejecutar consulta y obtener el número de coincidencias
+                    // Verificar si existe un votante con el nombre, apellidos y edad especificados
+                    int count = context.Voto_Votante
+                        .Count(v => v.Nombre == nombre && v.Apellidos == apellidos && v.Edad == edad);
 
-                    return count > 0;  // Devuelve true si hay al menos una coincidencia, lo que indica que el votante existe
+                    return count > 0;  // Devuelve true si hay al menos una coincidencia, indicando que el votante existe
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                    return false;
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return false;
             }
         }
 

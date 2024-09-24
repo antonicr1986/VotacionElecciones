@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBonlineAntonioModelStoreContainer" CdmEntityContainer="DBonlineAntonioEntities">
+    <EntitySetMapping Name="Voto_PartidoPolitico">
+      <EntityTypeMapping TypeName="DBonlineAntonioModel.Voto_PartidoPolitico">
+        <MappingFragment StoreEntitySet="Voto_PartidoPolitico">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Ideologia" ColumnName="Ideologia" />
+          <ScalarProperty Name="Votos" ColumnName="Votos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Voto_Votante">
+      <EntityTypeMapping TypeName="DBonlineAntonioModel.Voto_Votante">
+        <MappingFragment StoreEntitySet="Voto_Votante">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Antecedentes" ColumnName="Antecedentes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

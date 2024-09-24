@@ -24,3 +24,10 @@ C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\
 C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\obj\Debug\VotoElectronico.csproj.GenerateResource.Cache
 C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\bin\Debug\VotoElectronico.exe
 C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\bin\Debug\VotoElectronico.pdb
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\obj\Debug\VotoElectronico.csproj.AssemblyReference.cache
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\obj\Debug\VotoElectronico.csproj.CoreCompileInputs.cache
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\bin\Debug\EntityFramework.dll
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\bin\Debug\EntityFramework.xml
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\obj\Debug\VotoElectronico.csproj.CopyComplete

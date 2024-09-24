@@ -30,3 +30,10 @@ C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\
 C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\obj\Release\VotoElectronico.FormVotacion.resources
 C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\obj\Release\VotoElectronico.Properties.Resources.resources
 C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\obj\Release\VotoElectronico.csproj.GenerateResource.Cache
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\bin\Release\EntityFramework.dll
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\bin\Release\EntityFramework.xml
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\obj\Release\VotoElectronico.csproj.AssemblyReference.cache
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\obj\Release\VotoElectronico.csproj.CoreCompileInputs.cache
+C:\Users\anton\OneDrive\Escritorio\Git julio\VotacionElecciones\VotoElectronico\obj\Release\VotoElec.4CB5EBD9.Up2Date

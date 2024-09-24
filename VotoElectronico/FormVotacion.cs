@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -67,21 +68,22 @@ namespace VotoElectronico
             }            
         }
 
-        public void ActualizarVotos(string partidoPolitico)
+        public void ActualizarVotos(string partidoPolitico) //TODO
         {
-            string query = "UPDATE PartidoPolitico SET Votos = Votos + 1 WHERE Nombre = @Nombre";
-
-            using (SqlConnection conexion = objetoConexion.getConexion())
+            // Utilizamos el contexto de Entity Framework
+            using (var context = new DBonlineAntonioEntities())
             {
-                SqlCommand command = new SqlCommand(query, conexion);
-                command.Parameters.AddWithValue("@Nombre", partidoPolitico);  // Parámetro SQL
-
                 try
                 {
-                    int filasAfectadas = command.ExecuteNonQuery();  // Ejecutar la consulta
+                    // Buscar el partido político por nombre
+                    var partido = context.Voto_PartidoPolitico
+                        .FirstOrDefault(p => p.Nombre == partidoPolitico);
 
-                    if (filasAfectadas > 0)
+                    // Si se encuentra el partido, incrementamos los votos
+                    if (partido != null)
                     {
+                        partido.Votos += 1;
+                        context.SaveChanges(); // Guardar los cambios en la base de datos
                         Console.WriteLine("El voto se ha registrado correctamente.");
                     }
                     else

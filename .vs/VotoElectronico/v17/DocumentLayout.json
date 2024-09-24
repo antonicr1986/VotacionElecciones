@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\votoelectronico\\votante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|solutionrelative:votoelectronico\\votante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|c:\\users\\anton\\onedrive\\escritorio\\git julio\\votacionelecciones\\votoelectronico\\modelef.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|solutionrelative:votoelectronico\\modelef.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\anton\\AppData\\Local\\Temp\\.vsdbgsrc\\fe1f2415ee096fe4ba6a472792ddc8ad078f05f9a89291dcadaa165c12fd6ceb\\DefaultObjectMappingItemCollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\votoelectronico\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|solutionrelative:votoelectronico\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\votoelectronico\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|solutionrelative:votoelectronico\\formregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|c:\\users\\anton\\onedrive\\escritorio\\git julio\\votacionelecciones\\votoelectronico\\modelef.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|solutionrelative:votoelectronico\\modelef.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|c:\\users\\anton\\onedrive\\escritorio\\git julio\\votacionelecciones\\votoelectronico\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|solutionrelative:votoelectronico\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\votoelectronico\\formregistro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|solutionrelative:votoelectronico\\formregistro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\votoelectronico\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|solutionrelative:votoelectronico\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|c:\\users\\anton\\onedrive\\escritorio\\git julio\\votacionelecciones\\votoelectronico\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|solutionrelative:votoelectronico\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|c:\\users\\anton\\onedrive\\escritorio\\git julio\\votacionelecciones\\votoelectronico\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|solutionrelative:votoelectronico\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\votoelectronico\\formvotacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|solutionrelative:votoelectronico\\formvotacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\votoelectronico\\formvotacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{52E3FE4C-8FF8-4FB9-9579-3EA7B8638C4F}|VotoElectronico\\VotoElectronico.csproj|solutionrelative:votoelectronico\\formvotacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 515,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ModelEF.Context.tt",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\ModelEF.Context.tt",
+              "RelativeDocumentMoniker": "VotoElectronico\\ModelEF.Context.tt",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\ModelEF.Context.tt",
+              "RelativeToolTip": "VotoElectronico\\ModelEF.Context.tt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-09-23T16:21:46.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DefaultObjectMappingItemCollection.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\AppData\\Local\\Temp\\.vsdbgsrc\\fe1f2415ee096fe4ba6a472792ddc8ad078f05f9a89291dcadaa165c12fd6ceb\\DefaultObjectMappingItemCollection.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\fe1f2415ee096fe4ba6a472792ddc8ad078f05f9a89291dcadaa165c12fd6ceb\\DefaultObjectMappingItemCollection.cs",
+              "ToolTip": "C:\\Users\\anton\\AppData\\Local\\Temp\\.vsdbgsrc\\fe1f2415ee096fe4ba6a472792ddc8ad078f05f9a89291dcadaa165c12fd6ceb\\DefaultObjectMappingItemCollection.cs [Solo lectura]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\fe1f2415ee096fe4ba6a472792ddc8ad078f05f9a89291dcadaa165c12fd6ceb\\DefaultObjectMappingItemCollection.cs [Solo lectura]",
+              "ViewState": "AgIAAEgBAAAAAAAAAAAvwGEBAAAEAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T16:19:18.572Z",
+              "EditorCaption": " [Solo lectura]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Votante.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\Votante.cs",
+              "RelativeDocumentMoniker": "VotoElectronico\\Votante.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\Votante.cs",
+              "RelativeToolTip": "VotoElectronico\\Votante.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:08:28.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ModelEF.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\ModelEF.edmx",
+              "RelativeDocumentMoniker": "VotoElectronico\\ModelEF.edmx",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\ModelEF.edmx [Diagram1]",
+              "RelativeToolTip": "VotoElectronico\\ModelEF.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-09-23T16:15:47.033Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormRegistro.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\FormRegistro.cs",
+              "RelativeDocumentMoniker": "VotoElectronico\\FormRegistro.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\FormRegistro.cs",
+              "RelativeToolTip": "VotoElectronico\\FormRegistro.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAlwFcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:08:28.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormRegistro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\FormRegistro.cs",
+              "RelativeDocumentMoniker": "VotoElectronico\\FormRegistro.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\FormRegistro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "VotoElectronico\\FormRegistro.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:08:28.569Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\Conexion.cs",
+              "RelativeDocumentMoniker": "VotoElectronico\\Conexion.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\Conexion.cs",
+              "RelativeToolTip": "VotoElectronico\\Conexion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:17:03.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormRegistro.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\FormRegistro.Designer.cs",
+              "RelativeDocumentMoniker": "VotoElectronico\\FormRegistro.Designer.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\FormRegistro.Designer.cs",
+              "RelativeToolTip": "VotoElectronico\\FormRegistro.Designer.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:08:28.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\Program.cs",
+              "RelativeDocumentMoniker": "VotoElectronico\\Program.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\Program.cs",
+              "RelativeToolTip": "VotoElectronico\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T15:08:28.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\App.config",
+              "RelativeDocumentMoniker": "VotoElectronico\\App.config",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\App.config",
+              "RelativeToolTip": "VotoElectronico\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-09-23T15:15:59.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\packages.config",
+              "RelativeDocumentMoniker": "VotoElectronico\\packages.config",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\packages.config",
+              "RelativeToolTip": "VotoElectronico\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-09-23T15:16:59.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormVotacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\FormVotacion.cs",
+              "RelativeDocumentMoniker": "VotoElectronico\\FormVotacion.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Escritorio\\VotoElectronico\\VotoElectronico\\FormVotacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\VotoElectronico\\VotoElectronico\\FormVotacion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-09-23T15:08:28.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormVotacion.cs",
+              "DocumentMoniker": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\FormVotacion.cs",
+              "RelativeDocumentMoniker": "VotoElectronico\\FormVotacion.cs",
+              "ToolTip": "C:\\Users\\anton\\OneDrive\\Escritorio\\Git julio\\VotacionElecciones\\VotoElectronico\\FormVotacion.cs",
+              "RelativeToolTip": "VotoElectronico\\FormVotacion.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAD8AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-09-23T15:08:28.83Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
