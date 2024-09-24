@@ -100,11 +100,13 @@ namespace VotoElectronico
                                     else
                                     {
                                         MessageBox.Show("No se pudo insertar el votante.");
+                                        return;
                                     }
                                 }
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show("Error al intentar insertar el votante: " + ex.Message);
+                                    return;
                                 }
                             }
                         }
