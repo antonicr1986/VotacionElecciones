@@ -46,11 +46,7 @@ namespace VotoElectronico
                 MessageBox.Show("Introduce tu edad");
                 return;
             }
-            if (checkBoxAntecedentes.Checked == true)
-            {
-                MessageBox.Show("Personas con antecedentes penales no pueden votar");
-                return;
-            }
+
             try
             {
                 if (int.TryParse(textBoxEdad.Text, out edad))
@@ -61,12 +57,11 @@ namespace VotoElectronico
                         return;
                     }
                     if (!string.IsNullOrWhiteSpace(textBoxNombre.Text) && !string.IsNullOrWhiteSpace(textBoxApellidos.Text) 
-                        && edad >= mayoriaEdad && !checkBoxAntecedentes.Checked)
+                        && edad >= mayoriaEdad)
                     {
                         
                         string nombre = textBoxNombre.Text ;
                         string apellidos = textBoxApellidos.Text;
-                        bool antecedentes = checkBoxAntecedentes.Checked;
 
                         if (VotanteExiste(nombre, apellidos, edad))
                         {
@@ -76,7 +71,7 @@ namespace VotoElectronico
                         else
                         {
                             // Usar SqlConnection para conectarse a la base de datos
-                            using (var context = new DBonlineAntonioEntities()) //***EF
+                            using (var context = new DBonlineAntonioEF()) //***EF
                             {
                                 try
                                 {
@@ -86,7 +81,6 @@ namespace VotoElectronico
                                         Nombre = nombre,
                                         Apellidos = apellidos,
                                         Edad = edad,
-                                        Antecedentes = antecedentes
                                     };
 
                                     // Agregar el nuevo votante al contexto
@@ -95,47 +89,45 @@ namespace VotoElectronico
                                     //Guardar los cambios en la base de datos
                                     int rowsAffected = context.SaveChanges();
 
-                                        // Verificar si se ha insertado correctamente
-                                        if (rowsAffected > 0)
-                                        {
-                                            MessageBox.Show("El votante ha sido insertado exitosamente.");
-                                            textBoxNombre.Text = "";
-                                            textBoxApellidos.Text = "";
-                                            textBoxEdad.Text = "";
-                                            checkBoxAntecedentes.Checked = false;
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show("No se pudo insertar el votante.");
-                                        }
-                                    }
-                                    catch (Exception ex)
+                                    // Verificar si se ha insertado correctamente
+                                    if (rowsAffected > 0)
                                     {
-                                        MessageBox.Show("DentroDelCatch");
-                                        Console.WriteLine("Error: " + ex.Message);
+                                        MessageBox.Show("El votante ha sido insertado exitosamente.");
+                                        textBoxNombre.Text = "";
+                                        textBoxApellidos.Text = "";
+                                        textBoxEdad.Text = "";
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("No se pudo insertar el votante.");
                                     }
                                 }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("Error al intentar insertar el votante: " + ex.Message);
+                                }
                             }
-                            ventanaVotacion.ShowDialog();
                         }
-                        else
-                        {
-                            MessageBox.Show("Introduce un formato correcto en la edad");
-                        }
-                    }                  
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Excepcion: " + ex.Message);
-                }        
+                        ventanaVotacion.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Introduce un formato correcto en la edad");
+                    }
+                }                  
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Excepcion: " + ex.Message);
+            }        
+        }
 
         private void ButtonResultados_Click(object sender, EventArgs e)
         {
             bool votacionComenzada = false;
 
             // Usar el contexto de Entity Framework
-            using (var context = new DBonlineAntonioEntities())
+            using (var context = new DBonlineAntonioEF())
             {
                 int count = context.Voto_PartidoPolitico.Count();
 
@@ -185,7 +177,7 @@ namespace VotoElectronico
         {
             try
             {
-                using (var context = new DBonlineAntonioEntities())
+                using (var context = new DBonlineAntonioEF())
                 {
                     // Verificar si existe un votante con el nombre, apellidos y edad especificados
                     int count = context.Voto_Votante

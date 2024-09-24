@@ -71,7 +71,7 @@ namespace VotoElectronico
         public void ActualizarVotos(string partidoPolitico) //TODO
         {
             // Utilizamos el contexto de Entity Framework
-            using (var context = new DBonlineAntonioEntities())
+            using (var context = new DBonlineAntonioEF())
             {
                 try
                 {

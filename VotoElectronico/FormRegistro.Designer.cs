@@ -34,7 +34,6 @@
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.labelEdad = new System.Windows.Forms.Label();
             this.textBoxEdad = new System.Windows.Forms.TextBox();
-            this.checkBoxAntecedentes = new System.Windows.Forms.CheckBox();
             this.buttonResultados = new System.Windows.Forms.Button();
             this.labelApellidos = new System.Windows.Forms.Label();
             this.textBoxApellidos = new System.Windows.Forms.TextBox();
@@ -43,7 +42,7 @@
             // buttonConfirmar
             // 
             this.buttonConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConfirmar.Location = new System.Drawing.Point(27, 201);
+            this.buttonConfirmar.Location = new System.Drawing.Point(24, 171);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(106, 35);
             this.buttonConfirmar.TabIndex = 6;
@@ -86,21 +85,10 @@
             this.textBoxEdad.TabIndex = 4;
             this.textBoxEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEdad_KeyPress);
             // 
-            // checkBoxAntecedentes
-            // 
-            this.checkBoxAntecedentes.AutoSize = true;
-            this.checkBoxAntecedentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxAntecedentes.Location = new System.Drawing.Point(72, 156);
-            this.checkBoxAntecedentes.Name = "checkBoxAntecedentes";
-            this.checkBoxAntecedentes.Size = new System.Drawing.Size(171, 22);
-            this.checkBoxAntecedentes.TabIndex = 5;
-            this.checkBoxAntecedentes.Text = "Antecedentes penales";
-            this.checkBoxAntecedentes.UseVisualStyleBackColor = true;
-            // 
             // buttonResultados
             // 
             this.buttonResultados.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonResultados.Location = new System.Drawing.Point(158, 195);
+            this.buttonResultados.Location = new System.Drawing.Point(157, 165);
             this.buttonResultados.Name = "buttonResultados";
             this.buttonResultados.Size = new System.Drawing.Size(118, 46);
             this.buttonResultados.TabIndex = 7;
@@ -130,11 +118,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(303, 263);
+            this.ClientSize = new System.Drawing.Size(303, 232);
             this.Controls.Add(this.textBoxApellidos);
             this.Controls.Add(this.labelApellidos);
             this.Controls.Add(this.buttonResultados);
-            this.Controls.Add(this.checkBoxAntecedentes);
             this.Controls.Add(this.textBoxEdad);
             this.Controls.Add(this.labelEdad);
             this.Controls.Add(this.textBoxNombre);
@@ -156,7 +143,6 @@
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Label labelEdad;
         private System.Windows.Forms.TextBox textBoxEdad;
-        private System.Windows.Forms.CheckBox checkBoxAntecedentes;
         private System.Windows.Forms.Button buttonResultados;
         private System.Windows.Forms.Label labelApellidos;
         private System.Windows.Forms.TextBox textBoxApellidos;

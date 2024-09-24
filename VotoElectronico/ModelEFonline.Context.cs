@@ -13,10 +13,10 @@ namespace VotoElectronico
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DBonlineAntonioEntities : DbContext
+    public partial class DBonlineAntonioEF : DbContext
     {
-        public DBonlineAntonioEntities()
-            : base("name=DBonlineAntonioEntities")
+        public DBonlineAntonioEF()
+            : base("name=DBonlineAntonioEF")
         {
         }
     

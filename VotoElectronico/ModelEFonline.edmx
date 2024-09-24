@@ -22,7 +22,6 @@
           <Property Name="Nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Apellidos" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Edad" Type="int" Nullable="false" />
-          <Property Name="Antecedentes" Type="tinyint" Nullable="false" />
         </EntityType>
         <EntityContainer Name="DBonlineAntonioModelStoreContainer">
           <EntitySet Name="Voto_PartidoPolitico" EntityType="Self.Voto_PartidoPolitico" Schema="dbo" store:Type="Tables" />
@@ -50,9 +49,8 @@
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Edad" Type="Int32" Nullable="false" />
-          <Property Name="Antecedentes" Type="Byte" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="DBonlineAntonioEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DBonlineAntonioEF" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Voto_PartidoPolitico" EntityType="Self.Voto_PartidoPolitico" />
           <EntitySet Name="Voto_Votante" EntityType="Self.Voto_Votante" />
         </EntityContainer>
@@ -61,7 +59,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DBonlineAntonioModelStoreContainer" CdmEntityContainer="DBonlineAntonioEntities">
+        <EntityContainerMapping StorageEntityContainer="DBonlineAntonioModelStoreContainer" CdmEntityContainer="DBonlineAntonioEF">
           <EntitySetMapping Name="Voto_PartidoPolitico">
             <EntityTypeMapping TypeName="DBonlineAntonioModel.Voto_PartidoPolitico">
               <MappingFragment StoreEntitySet="Voto_PartidoPolitico">
@@ -79,7 +77,6 @@
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
                 <ScalarProperty Name="Edad" ColumnName="Edad" />
-                <ScalarProperty Name="Antecedentes" ColumnName="Antecedentes" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -18,12 +18,5 @@ namespace VotoElectronico
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public int Edad { get; set; }
-        public byte AntecedentesByte { get; set; }
-
-        public bool Antecedentes
-        {
-            get { return AntecedentesByte != 0; }  // Si el valor es distinto de 0, es true
-            set { AntecedentesByte = value ? (byte)1 : (byte)0; }  // Convierte true a 1, false a 0
-        }
     }
 }
