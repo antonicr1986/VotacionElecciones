@@ -58,7 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
+    <Compile Include="CRUD.cs" />
     <Compile Include="FormRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
